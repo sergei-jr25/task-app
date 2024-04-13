@@ -2,11 +2,18 @@
 
 import Loader from '@/components/ui/loader/Loader'
 import { IProduct, iReviews } from '@/shared/types/products'
+import dynamic from 'next/dynamic'
 import { FC, useEffect, useState } from 'react'
 import ProductItem from '../../ui/product-item/ProductItem'
-import AddedProducts from './AddedProducts/AddedProducts'
 import styles from './Hero.module.scss'
 import Reviews from './Reviews/Reviews'
+
+const DynamicAddedProducts = dynamic(
+	() => import('./AddedProducts/AddedProducts'),
+	{
+		ssr: false,
+	}
+)
 
 interface IHeroPage {
 	products: IProduct[]
@@ -62,7 +69,7 @@ const HeroPage: FC<IHeroPage> = ({ products, reviews }) => {
 			<div className={`${styles.hero__container} container`}>
 				<h1 className={styles.hero__title}>Тестовое задание</h1>
 				<Reviews reviews={reviews} />
-				<AddedProducts />
+				<DynamicAddedProducts />
 				{productsData ? (
 					<div className={styles.hero__items}>
 						{productsData?.map((product: IProduct) => (

@@ -17,10 +17,10 @@ const Modal: FC<IModal> = ({ isOpen, onClose, children }) => {
 	return (
 		<div className={`modal ${isOpen ? 'open' : ''}`}>
 			<div className='modal-content'>
+				{children}
 				<button className='close-btn' onClick={onClose}>
 					×
 				</button>
-				{children}
 			</div>
 		</div>
 	)

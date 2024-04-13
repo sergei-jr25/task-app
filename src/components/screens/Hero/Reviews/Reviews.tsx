@@ -8,18 +8,20 @@ const Reviews: FC<{ reviews: iReviews[] }> = ({ reviews }) => {
 	return (
 		<div className={styles.reviews}>
 			<div className={styles.reviews__items}>
-				{reviews ? (
-					reviews?.map(review => (
-						<div key={review.id} className={styles.reviews__item}>
-							<div
-								className={styles.reviews__text}
-								dangerouslySetInnerHTML={{ __html: sanitizeHtml(review.text) }}
-							></div>
-						</div>
-					))
-				) : (
-					<Loader height='300px' />
-				)}
+				{reviews
+					? reviews?.map(review => (
+							<div key={review.id} className={styles.reviews__item}>
+								<div
+									className={styles.reviews__text}
+									dangerouslySetInnerHTML={{
+										__html: sanitizeHtml(review.text),
+									}}
+								></div>
+							</div>
+					  ))
+					: Array.from({ length: 2 }).map((_, idx) => (
+							<Loader key={idx} height='300px' />
+					  ))}
 			</div>
 		</div>
 	)

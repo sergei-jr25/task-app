@@ -1,0 +1,56 @@
+.added {
+	padding: 12px;
+	background-color: #d9d9d9;
+	border-radius: 15px;
+	color: #000;
+	max-width: 720px;
+	margin: 0px auto 47px auto;
+	&__title {
+		font-size: 36px;
+		line-height: 43px;
+
+		margin: 0px 0px 11px 0px;
+	}
+
+	&__items {
+		display: grid;
+		gap: 25px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: 24px;
+		line-height: 29px;
+		@media (max-width: 768px) {
+			display: grid;
+			gap: 15px;
+		}
+	}
+
+	&__name {
+		max-width: 250px;
+		margin: 0px 90px 0px 0px;
+
+		@media (max-width: 768px) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	&__quantity {
+		margin: 0px 15px 0px 0px;
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+
+		gap: 40px;
+		margin: 20px 0px 0px 0px;
+
+		@media (max-width: 768px) {
+			display: grid;
+			gap: 15px;
+		}
+	}
+}

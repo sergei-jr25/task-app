@@ -1,0 +1,38 @@
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 3;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.open {
+	display: block;
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 20% auto;
+	padding: 40px;
+	border: 1px solid #888;
+	border-radius: 5px;
+	max-width: 500px;
+	width: 80%;
+	overflow: auto;
+}
+
+.close-btn {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close-btn:hover {
+	color: black;
+}

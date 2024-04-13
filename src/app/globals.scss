@@ -1,0 +1,11 @@
+@import '../assets/styles/common.scss';
+@import '../assets/styles/null.scss';
+@import '../assets/styles/modal.scss';
+
+* {
+	box-sizing: border-box;
+}
+
+body.modal-open {
+	overflow: hidden;
+}

@@ -1,0 +1,29 @@
+.hero {
+	padding: 50px 0;
+
+	&__title {
+		font-size: 96px;
+		line-height: 116px;
+		color: #f0f0f0;
+		background-color: #777777;
+		margin: 0px 0px 105px 0px;
+		text-align: center;
+
+		@media (max-width: 992px) {
+			font-size: 48px;
+			line-height: 56px;
+			margin: 0px 0px 75px 0px;
+		}
+		@media (max-width: 768px) {
+			font-size: 38px;
+			line-height: 42px;
+			margin: 0px 0px 35px 0px;
+		}
+	}
+
+	&__items {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+	}
+}

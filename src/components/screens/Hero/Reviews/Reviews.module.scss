@@ -1,0 +1,37 @@
+.reviews {
+	margin: 0px 0px 243px 0px;
+	max-width: 1000px;
+	margin: 0px auto 243px auto;
+
+	@media (max-width: 992px) {
+		margin: 0px auto 143px auto;
+	}
+	@media (max-width: 768px) {
+		margin: 0px auto 63px auto;
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		gap: 20px;
+		justify-content: center;
+	}
+
+	&__item {
+		display: grid;
+		gap: 10px;
+		padding: 15px;
+		background-color: #d9d9d9;
+		border-radius: 15px;
+	}
+
+	&__text {
+		display: grid;
+		gap: 15px;
+		p {
+			display: grid;
+			gap: 15px;
+			font-size: 18px;
+			line-height: 25px;
+		}
+	}
+}

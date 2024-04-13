@@ -1,0 +1,34 @@
+$skeleton-width: 100%;
+$skeleton-height: 20px;
+$skeleton-color: #e0e0e0;
+$skeleton-animation-duration: 1.5s;
+
+@keyframes shimmer {
+	0% {
+		background-position: -200%;
+	}
+	100% {
+		background-position: 200%;
+	}
+}
+
+.skeleton {
+	width: $skeleton-width;
+	height: $skeleton-height;
+	background-color: $skeleton-color;
+	animation: shimmer $skeleton-animation-duration infinite linear;
+}
+
+.shape {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+		to right,
+		transparent 0%,
+		rgba(0, 0, 0, 0.4) 50%,
+		transparent 100%
+	);
+	background-repeat: no-repeat;
+	background-size: 200% auto;
+	animation: shimmer $skeleton-animation-duration infinite linear;
+}
